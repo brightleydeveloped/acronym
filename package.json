@@ -1,0 +1,25 @@
+{
+  "name": "acronym",
+  "version": "0.1.0",
+  "description": "Generate an acronym.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatLillis/acronym.git"
+  },
+  "keywords": [
+    "acronym",
+    "generate",
+    "backronym",
+    "bacronym"
+  ],
+  "author": "Pat Lillis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatLillis/acronym/issues"
+  },
+  "homepage": "https://github.com/PatLillis/acronym#readme"
+}
