@@ -52,26 +52,6 @@ function acronym (text, {
 }
 
 
-function unused () {}
-function unused1 () {}
-function unused2 () {}
-function unused3 () {}
-function unused4 () {}
-function unused5 () {}
-function unused6 () {}
-function unused7 () {}
-function unused8 () {}
-
-if (false) {
-	unused()
-	unused2()
-	unused3()
-	unused4()
-	unused5()
-	unused6()
-	unused7()
-	unused8()
-}
 
 // Exports
 initialize()
