@@ -1,7 +1,7 @@
 {
   "extends": "standard",
   "rules": {
-  	"indent": ["error", "tab"],
-  	"no-multiple-empty-lines": ["error", {"max": 2}]
+  	"indent": [2, "tab"],
+  	"no-multiple-empty-lines": [2, {"max": 2}]
   }
 }
