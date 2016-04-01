@@ -1,15 +1,8 @@
 {
-  "ecmaFeatures": {
-    modules: true
-  },
   "extends": "standard",
   "rules": {
   	"indent": [2, "tab"],
   	"no-multiple-empty-lines": [2, {"max": 2}]
-  },
-  "env": {
-    "es6": true,
-    "node": true
   },
   "globals": {
     "describe": false,
