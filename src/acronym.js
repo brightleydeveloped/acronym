@@ -16,8 +16,7 @@ for (let i = 0; i < wordArray.length; i++) {
 	dictionary[wordArray[i].charAt(0)].push(wordArray[i]);
 }
 
-
-function acronym(text, options = {}) {
+function acronym(text) {
 
 	if (isString(text)) {
 		return text;
@@ -26,7 +25,7 @@ function acronym(text, options = {}) {
 		return text;
 	}
 	else {
-		return '';
+		return undefined;
 	}
 }
 

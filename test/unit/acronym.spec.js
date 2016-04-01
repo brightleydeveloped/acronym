@@ -26,4 +26,11 @@ describe('acronym (unit)', () => {
 			expect(acronym(['a', 'b', 'c', 'd', 'e', 'f'])).to.have.lengthOf(6)
 		})
 	})
+
+
+	describe('when passed undefined', () => {
+		it('should return undefined', () => {
+			expect(acronym()).to.not.exist
+		})
+	})
 })
