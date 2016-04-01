@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 // returns the path to the word list which is separated by `\n`
-import wordListPath from 'word-list';
+import wordListPath from 'word-list'
 
 const wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n')
 
