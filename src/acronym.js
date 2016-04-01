@@ -18,7 +18,7 @@ for (let i = 0; i < wordArray.length; i++) {
 
 function acronym (text) {
 	if (isString(text)) {
-		return text
+		return getWord(text.charAt(0))
 	} else if (isArray(text)) {
 		return text
 	} else {
@@ -29,5 +29,6 @@ function acronym (text) {
 
 const isString = (text) => typeof text === 'string'
 const isArray = (text) => text instanceof Array
+const getWord = (letter) => dictionary[letter][Math.floor(Math.random() * dictionary[letter].length)]
 
 export default acronym
