@@ -1,7 +1,9 @@
+/*global describe it*/
+
 import chai from 'chai'
 import acronym from '../../src/acronym.js'
 
-const expect = chai.expect;
+const expect = chai.expect
 
 describe('acronym (unit)', () => {
 	it('should be a Function', () => {
