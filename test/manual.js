@@ -1,4 +1,6 @@
 var acronym = require('../dist/acronym.js')
 
-for (var i = 0; i < 3; i++)
-	console.log(acronym('z'));
+const str = 'a.bCd??EDF'
+
+console.log(str)
+console.log(acronym(str))
