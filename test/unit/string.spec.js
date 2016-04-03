@@ -64,15 +64,15 @@ export default function () {
 		})
 
 
-		it ('should use single space as separator', () => {
+		it('should use single space as separator', () => {
 			const option = { separator: ' ' }
 
-			expect(acronym('npm', option)).to.have.string(' ')
-			expect(acronym('a', option)).not.to.have.string(' ')
+			expect(acronym('npm', option).match(/ /g) || []).to.have.length(2)
+			expect(acronym('1', option).match(/ /g) || []).to.have.length(0)
 		})
 
 
-		it ('should use empty string as separator', () => {
+		it('should use empty string as separator', () => {
 			const option = { separator: '' }
 
 			expect(acronym('npm', option)).not.to.have.string(' ')
@@ -80,7 +80,7 @@ export default function () {
 		})
 
 
-		it ('should use any string as separator', () => {
+		it('should use any string as separator', () => {
 			// Test some special separators
 			const separators = [
 				'-',
@@ -94,11 +94,93 @@ export default function () {
 
 			for (let sep of separators) {
 				const option = { separator: sep }
+				let re = new RegExp(sep, "g")
 
-				expect(acronym('npm', option)).to.have.string(sep)
+				//Make sure we escape necessary charaters
+				if (sep === '.')
+					re = new RegExp('\\' + sep, 'g')
+
+				expect(acronym('npm', option).match(re) || []).to.have.length(2)
 				expect(acronym('npm', option)).not.to.have.string(' ')
-				expect(acronym('a', option)).not.to.have.string(sep)
+				expect(acronym('a', option).match(re) || []).to.have.length(0)
 				expect(acronym('a', option)).not.to.have.string(' ')
+			}
+		})
+
+
+		it('should skip over non-alpha characters', () => {
+			expect(acronym('n.p.m').match(/\./g) || []).to.have.length(2)
+
+			const cap = [
+				true,
+				false
+			]
+
+			// Test some special separators
+			const separators = [
+				'-',
+				'--',
+				',',
+				'~',
+				'&',
+				'___',
+				'1'
+			]
+
+			for (let c of cap) {
+				for (let sep of separators) {
+					const option = { separator: sep, capitalize: c }
+					let sepRe = new RegExp(sep, "g")
+					let wordRe = /\./g;
+
+					//Make sure we escape necessary charaters
+					if (sep === '.')
+						sepRe = new RegExp('\\' + sep, 'g')
+
+					expect(acronym('n.p.m', option).match(sepRe) || []).to.have.length(4)
+					expect(acronym('n.p.m', option).match(wordRe) || []).to.have.length(2)
+					expect(acronym('n.p.m', option)).not.to.have.string(' ')
+					expect(acronym('a', option).match(sepRe) || []).to.have.length(0)
+					expect(acronym('a', option).match(wordRe) || []).to.have.length(0)
+					expect(acronym('a', option)).not.to.have.string(' ')
+				}
+			}
+		})
+
+		it('should not use separator for consecutive non-alpha characters', () => {
+			expect(acronym('n.?.p.?.m').match(/ /g) || []).to.have.length(4)
+
+			const cap = [
+				true,
+				false
+			]
+
+			// Test some special separators
+			const separators = [
+				'-',
+				'--',
+				',',
+				'~',
+				'&',
+				'___',
+				'1'
+			]
+
+			for (let c of cap) {
+				for (let sep of separators) {
+					const option = { separator: sep, capitalize: c }
+					let sepRe = new RegExp(sep, "g")
+					let wordRe = /\./g;
+
+					//Make sure we escape necessary charaters
+					if (sep === '.')
+						sepRe = new RegExp('\\' + sep, 'g')
+
+					expect(acronym('n.?.p.?.m', option).match(sepRe) || []).to.have.length(4)
+					expect(acronym('n.?.p.?.m', option)).not.to.have.string(' ')
+					expect(acronym('a', option).match(sepRe) || []).to.have.length(0)
+					expect(acronym('a', option)).not.to.have.string(' ')
+				}
 			}
 		})
 	})
