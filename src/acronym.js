@@ -47,7 +47,12 @@ function acronym (text, options) {
 		return processWord(text, actual)
 	} else if (isArray(text)) {
 		// Return acronym for each word in the array.
-		return text
+		return text.map((el) => {
+			if (isString(el))
+				return processWord(el, actual)
+			else
+				return el
+		})
 	} else {
 		// ???
 		return text

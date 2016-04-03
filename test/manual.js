@@ -2,7 +2,7 @@ import acronym from '../src/acronym.js'
 
 
 const tests = [
-	'npm',
+	['npm'],
 	'a.b.c',
 	'Test',
 	'a'
