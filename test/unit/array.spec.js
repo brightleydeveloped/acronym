@@ -130,13 +130,13 @@ export default function () {
 
 			for (let sep of separators) {
 				const option = { separator: sep }
-				let re = new RegExp(sep, "g")
+				let re = new RegExp(sep, 'g')
 
-				//Make sure we escape necessary charaters
+				// Make sure we escape necessary charaters
 				if (sep === '.')
 					re = new RegExp('\\' + sep, 'g')
 
-				const result = acronym(['npm', 'a'], option);
+				const result = acronym(['npm', 'a'], option)
 
 				expect(result[0].match(re) || []).to.have.length(2)
 				expect(result[0]).not.to.have.string(' ')
@@ -168,14 +168,14 @@ export default function () {
 			for (let c of cap) {
 				for (let sep of separators) {
 					const option = { separator: sep, capitalize: c }
-					let sepRe = new RegExp(sep, "g")
-					let wordRe = /\./g;
+					let sepRe = new RegExp(sep, 'g')
+					let wordRe = /\./g
 
-					//Make sure we escape necessary charaters
+					// Make sure we escape necessary charaters
 					if (sep === '.')
 						sepRe = new RegExp('\\' + sep, 'g')
 
-					const result = acronym(['n.p.m', 'a'], option);
+					const result = acronym(['n.p.m', 'a'], option)
 
 					expect(result[0].match(sepRe) || []).to.have.length(4)
 					expect(result[0].match(wordRe) || []).to.have.length(2)
@@ -209,10 +209,9 @@ export default function () {
 			for (let c of cap) {
 				for (let sep of separators) {
 					const option = { separator: sep, capitalize: c }
-					let sepRe = new RegExp(sep, "g")
-					let wordRe = /\./g;
+					let sepRe = new RegExp(sep, 'g')
 
-					//Make sure we escape necessary charaters
+					// Make sure we escape necessary charaters
 					if (sep === '.')
 						sepRe = new RegExp('\\' + sep, 'g')
 

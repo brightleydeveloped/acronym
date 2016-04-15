@@ -19,4 +19,29 @@ export default function () {
 			expect(acronym(-12.345)).to.not.exist
 		})
 	})
+
+	describe('when passed a boolean', () => {
+		it('should return undefined', () => {
+			expect(acronym(true)).to.not.exist
+			expect(acronym(false)).to.not.exist
+		})
+	})
+
+	describe('when passed null', () => {
+		it('should return undefined', () => {
+			expect(acronym(null)).to.not.exist
+		})
+	})
+
+	describe('when passed an object', () => {
+		it('should return undefined', () => {
+			const obj = {
+				a: false,
+				b: 'nothing',
+				c: undefined
+			}
+
+			expect(acronym(obj)).to.not.exist
+		})
+	})
 }

@@ -94,9 +94,9 @@ export default function () {
 
 			for (let sep of separators) {
 				const option = { separator: sep }
-				let re = new RegExp(sep, "g")
+				let re = new RegExp(sep, 'g')
 
-				//Make sure we escape necessary charaters
+				// Make sure we escape necessary charaters
 				if (sep === '.')
 					re = new RegExp('\\' + sep, 'g')
 
@@ -130,10 +130,10 @@ export default function () {
 			for (let c of cap) {
 				for (let sep of separators) {
 					const option = { separator: sep, capitalize: c }
-					let sepRe = new RegExp(sep, "g")
-					let wordRe = /\./g;
+					let sepRe = new RegExp(sep, 'g')
+					let wordRe = /\./g
 
-					//Make sure we escape necessary charaters
+					// Make sure we escape necessary charaters
 					if (sep === '.')
 						sepRe = new RegExp('\\' + sep, 'g')
 
@@ -169,10 +169,9 @@ export default function () {
 			for (let c of cap) {
 				for (let sep of separators) {
 					const option = { separator: sep, capitalize: c }
-					let sepRe = new RegExp(sep, "g")
-					let wordRe = /\./g;
+					let sepRe = new RegExp(sep, 'g')
 
-					//Make sure we escape necessary charaters
+					// Make sure we escape necessary charaters
 					if (sep === '.')
 						sepRe = new RegExp('\\' + sep, 'g')
 
