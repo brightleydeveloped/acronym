@@ -51,11 +51,11 @@ function acronym (text, options) {
 			if (isString(el))
 				return processWord(el, actual)
 			else
-				return el
+				return undefined
 		})
 	} else {
 		// ???
-		return text
+		return undefined
 	}
 }
 

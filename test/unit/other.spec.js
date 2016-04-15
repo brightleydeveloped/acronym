@@ -11,12 +11,12 @@ export default function () {
 	})
 
 	describe('when passed a number', () => {
-		it('should return a number', () => {
-			expect(acronym(0)).to.equal(0)
-			expect(acronym(1)).to.equal(1)
-			expect(acronym(-17)).to.equal(-17)
-			expect(acronym(1.5)).to.equal(1.5)
-			expect(acronym(-12.345)).to.equal(-12.345)
+		it('should return undefined', () => {
+			expect(acronym(0)).to.not.exist
+			expect(acronym(1)).to.not.exist
+			expect(acronym(-17)).to.not.exist
+			expect(acronym(1.5)).to.not.exist
+			expect(acronym(-12.345)).to.not.exist
 		})
 	})
 }
