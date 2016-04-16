@@ -1,6 +1,4 @@
-// returns the path to the word list which is separated by `\n`
-import wordListPath from 'word-list'
-import fs from 'fs'
+import words from 'more-words'
 import capitalize from 'lodash.capitalize'
 import lowercase from 'lodash.lowercase'
 import defaults from 'lodash.defaults'
@@ -20,7 +18,6 @@ const isAlpha = (letter) => /^[a-zA-Z]+$/g.test(letter)
 
 // Set up the dictionary of words using word-list
 function initialize () {
-	const wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n')
 	const alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 	// Empty array for each letter
@@ -28,8 +25,8 @@ function initialize () {
 		dictionary[alphabet.charAt(i)] = []
 
 	// Put all the words into the right spot.
-	for (let i = 0; i < wordArray.length; i++)
-		dictionary[wordArray[i].charAt(0)].push(wordArray[i])
+	for (let i = 0; i < words.length; i++)
+		dictionary[words[i].charAt(0)].push(words[i])
 }
 
 
