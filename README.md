@@ -21,7 +21,7 @@ $ npm install --save acronym
 Generate acronym from a string:
 ```js
 import acronym from 'acronym'
-console.log(acronym('npm'))
+acronym('npm')
 // => 'Nice Promise Mistakes'
 ```
 
@@ -34,11 +34,62 @@ const words = [
   'bird',
   'noodle'
 ];
-console.log(acronym(words))
+acronym(words)
 // => [ 'Wins Unapproved Thrilled',
 // =>  'Boring Irresistibile Raptures Disaster',
 // =>  'Novel Oversell Outcry Devastated Lack Endorse' ]
 ```
+
+## Options
+
+Pass in options via a second parameter to the `acronym()` function
+
+### capitalize
+
+Determines wether the first letter of each word in the acronym will be capital. Default is `true`.
+
+```js
+import acronym from 'acronym'
+const options = {
+  capitalize: true
+}
+acronym('npm', options)
+// => 'No Pleasure Misbehaving'
+```
+
+```js
+import acronym from 'acronym'
+const options = {
+  capitalize: false
+}
+acronym('npm', options)
+// => 'no profiteer misreporting'
+```
+
+
+### separator
+
+Determines the string between each word in the acronyn. Default is a single space.
+
+```js
+import acronym from 'acronym'
+const options = {
+  separator: ', '
+}
+acronym('npm', options)
+// => 'Nasty, Preventing, Mocked'
+```
+
+```js
+import acronym from 'acronym'
+const options = {
+  separator: '-',
+  capitalize: false
+}
+acronym('npm', options)
+// => 'needy-positive-mercy'
+```
+
 
 
 
