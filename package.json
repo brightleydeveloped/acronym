@@ -28,7 +28,10 @@
   },
   "homepage": "https://github.com/PatLillis/acronym#readme",
   "dependencies": {
-    "word-list": "^1.0.1"
+    "word-list": "^1.0.1",
+    "lodash.capitalize": "^4.1.1",
+    "lodash.defaults": "^4.0.1",
+    "lodash.lowercase": "^4.1.0",
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -40,9 +43,6 @@
     "eslint": "^2.5.3",
     "eslint-plugin-babel": "^3.1.0",
     "istanbul": "^1.0.0-alpha",
-    "lodash.capitalize": "^4.1.1",
-    "lodash.defaults": "^4.0.1",
-    "lodash.lowercase": "^4.1.0",
     "mocha": "^2.4.5"
   }
 }
