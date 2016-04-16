@@ -1,7 +1,7 @@
 {
   "name": "acronym",
   "version": "0.9.0",
-  "description": "Generate an acronym.",
+  "description": "Generate your very own acronyms!",
   "main": "dist/acronym.js",
   "scripts": {
     "build": "babel src --out-dir dist",
