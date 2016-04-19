@@ -1,6 +1,6 @@
 # acronym
 
-[![Build Status](https://travis-ci.org/PatLillis/acronym.svg?branch=master)](https://travis-ci.org/PatLillis/acronym)
+[![Build Status](https://travis-ci.org/patlillis/acronym.svg?branch=master)](https://travis-ci.org/PatLillis/acronym)
 [![Test Coverage](https://codeclimate.com/github/PatLillis/acronym/badges/coverage.svg)](https://codeclimate.com/github/PatLillis/acronym/coverage)
 
 
