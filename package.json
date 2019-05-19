@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/PatLillis/acronym#readme",
   "dependencies": {
-    "more-words": "^1.0.2",
+    "more-words": "brightley/developed",
     "lodash.capitalize": "^4.1.1",
     "lodash.defaults": "^4.0.1",
     "lodash.lowercase": "^4.1.0"
