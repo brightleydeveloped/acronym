@@ -1,6 +1,6 @@
 # acronym
 
-This fork uses a different set of words.  The words used in PatLillis/more-words are depressing and has a couple cusswords.
+This fork uses a different set of words.  The words used in PatLillis/more-words are depressing and have a couple cusswords.
 
 [![Build Status](https://travis-ci.org/patlillis/acronym.svg?branch=master)](https://travis-ci.org/PatLillis/acronym)
 [![Test Coverage](https://codeclimate.com/github/PatLillis/acronym/badges/coverage.svg)](https://codeclimate.com/github/PatLillis/acronym/coverage)
