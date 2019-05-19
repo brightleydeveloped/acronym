@@ -1,6 +1,6 @@
 {
-  "name": "acronym",
-  "version": "1.0.1",
+  "name": "goodwood-acronym",
+  "version": "1.0.2",
   "description": "Generate your very own acronyms!",
   "main": "dist/acronym.js",
   "scripts": {
